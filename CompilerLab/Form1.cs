@@ -208,9 +208,9 @@ namespace CompilerLab
 
         private void Reference()
         {
-            if (System.IO.File.Exists("../../menu.chm"))
+            if (System.IO.File.Exists("../../menu/menu.chm"))
             {
-                Help.ShowHelp(this, "../../menu.chm");
+                Help.ShowHelp(this, "../../menu/menu.chm");
             }
         }
 
