@@ -208,7 +208,10 @@ namespace CompilerLab
 
         private void Reference()
         {
-            System.Diagnostics.Process.Start("menu.chm");
+            if (System.IO.File.Exists("menu.chm"))
+            {
+                System.Diagnostics.Process.Start("menu.chm");
+            }
         }
 
         private void InputTextBox_TextChanged(object sender, EventArgs e)
