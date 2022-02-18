@@ -59,12 +59,14 @@
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inputTextBox = new System.Windows.Forms.RichTextBox();
             this.outputTextBox = new System.Windows.Forms.RichTextBox();
+            this.labelDebug = new System.Windows.Forms.Label();
             this.menuStripIcons.SuspendLayout();
             this.menuStripTexts.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripIcons
             // 
+            this.menuStripIcons.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStripIcons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createIconToolStripMenuItem,
             this.openIconToolStripMenuItem,
@@ -76,7 +78,7 @@
             this.PasteIconToolStripMenuItem});
             this.menuStripIcons.Location = new System.Drawing.Point(0, 24);
             this.menuStripIcons.Name = "menuStripIcons";
-            this.menuStripIcons.Size = new System.Drawing.Size(800, 24);
+            this.menuStripIcons.Size = new System.Drawing.Size(685, 40);
             this.menuStripIcons.TabIndex = 0;
             this.menuStripIcons.Text = "menuStrip1";
             // 
@@ -84,60 +86,61 @@
             // 
             this.createIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.file_solid;
             this.createIconToolStripMenuItem.Name = "createIconToolStripMenuItem";
-            this.createIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.createIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.createIconToolStripMenuItem.Click += new System.EventHandler(this.CreateIconToolStripMenuItem_Click);
             // 
             // openIconToolStripMenuItem
             // 
             this.openIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.folder_open_solid;
             this.openIconToolStripMenuItem.Name = "openIconToolStripMenuItem";
-            this.openIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.openIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.openIconToolStripMenuItem.Click += new System.EventHandler(this.OpenIconToolStripMenuItem_Click);
             // 
             // saveIconToolStripMenuItem
             // 
             this.saveIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.floppy_disk_solid;
             this.saveIconToolStripMenuItem.Name = "saveIconToolStripMenuItem";
-            this.saveIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.saveIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.saveIconToolStripMenuItem.Click += new System.EventHandler(this.SaveIconToolStripMenuItem_Click);
             // 
             // undoIconToolStripMenuItem
             // 
             this.undoIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.rotate_left_solid;
             this.undoIconToolStripMenuItem.Name = "undoIconToolStripMenuItem";
-            this.undoIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.undoIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.undoIconToolStripMenuItem.Click += new System.EventHandler(this.UndoIconToolStripMenuItem1_Click);
             // 
             // redoIconToolStripMenuItem
             // 
             this.redoIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.rotate_right_solid;
             this.redoIconToolStripMenuItem.Name = "redoIconToolStripMenuItem";
-            this.redoIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.redoIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.redoIconToolStripMenuItem.Click += new System.EventHandler(this.RedoIconToolStripMenuItem_Click);
             // 
             // copyIconToolStripMenuItem
             // 
             this.copyIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.copy_solid;
             this.copyIconToolStripMenuItem.Name = "copyIconToolStripMenuItem";
-            this.copyIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.copyIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.copyIconToolStripMenuItem.Click += new System.EventHandler(this.CopyIconToolStripMenuItem_Click);
             // 
             // cutIconToolStripMenuItem
             // 
             this.cutIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.scissors_solid;
             this.cutIconToolStripMenuItem.Name = "cutIconToolStripMenuItem";
-            this.cutIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.cutIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.cutIconToolStripMenuItem.Click += new System.EventHandler(this.CutIconToolStripMenuItem_Click);
             // 
             // PasteIconToolStripMenuItem
             // 
             this.PasteIconToolStripMenuItem.Image = global::CompilerLab.Properties.Resources.paste_solid;
             this.PasteIconToolStripMenuItem.Name = "PasteIconToolStripMenuItem";
-            this.PasteIconToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.PasteIconToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
             this.PasteIconToolStripMenuItem.Click += new System.EventHandler(this.PasteIconToolStripMenuItem_Click);
             // 
             // menuStripTexts
             // 
+            this.menuStripTexts.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStripTexts.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.правкаToolStripMenuItem,
@@ -146,7 +149,7 @@
             this.справкаToolStripMenuItem});
             this.menuStripTexts.Location = new System.Drawing.Point(0, 0);
             this.menuStripTexts.Name = "menuStripTexts";
-            this.menuStripTexts.Size = new System.Drawing.Size(800, 24);
+            this.menuStripTexts.Size = new System.Drawing.Size(685, 24);
             this.menuStripTexts.TabIndex = 1;
             this.menuStripTexts.Text = "menuStrip2";
             // 
@@ -283,23 +286,25 @@
             // ReferenceToolStripMenuItem
             // 
             this.ReferenceToolStripMenuItem.Name = "ReferenceToolStripMenuItem";
-            this.ReferenceToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ReferenceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ReferenceToolStripMenuItem.Text = "Вызов справки";
+            this.ReferenceToolStripMenuItem.Click += new System.EventHandler(this.ReferenceToolStripMenuItem_Click);
             // 
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.AboutToolStripMenuItem.Text = "О программе";
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(12, 61);
+            this.inputTextBox.Location = new System.Drawing.Point(12, 67);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(776, 169);
             this.inputTextBox.TabIndex = 2;
             this.inputTextBox.Text = "";
             this.inputTextBox.TextChanged += new System.EventHandler(this.InputTextBox_TextChanged);
+            this.inputTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyDown);
             // 
             // outputTextBox
             // 
@@ -309,11 +314,21 @@
             this.outputTextBox.TabIndex = 3;
             this.outputTextBox.Text = "";
             // 
+            // labelDebug
+            // 
+            this.labelDebug.AutoSize = true;
+            this.labelDebug.Location = new System.Drawing.Point(12, 431);
+            this.labelDebug.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDebug.Name = "labelDebug";
+            this.labelDebug.Size = new System.Drawing.Size(0, 13);
+            this.labelDebug.TabIndex = 4;
+            // 
             // Compiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(685, 389);
+            this.Controls.Add(this.labelDebug);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.menuStripIcons);
@@ -322,6 +337,7 @@
             this.Name = "Compiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Compiler_FormClosing);
             this.menuStripIcons.ResumeLayout(false);
             this.menuStripIcons.PerformLayout();
             this.menuStripTexts.ResumeLayout(false);
@@ -364,6 +380,7 @@
         private System.Windows.Forms.ToolStripMenuItem selectAllВсеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ReferenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
+        private System.Windows.Forms.Label labelDebug;
     }
 }
 
